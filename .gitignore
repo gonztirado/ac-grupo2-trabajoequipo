@@ -83,3 +83,12 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+# Intellij project files
+*.iws
+.idea/tasks.xml
+.idea
+*.iml
+
+# OS
+.DS_Store
