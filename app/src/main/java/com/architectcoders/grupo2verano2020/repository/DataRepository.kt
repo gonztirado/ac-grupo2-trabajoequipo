@@ -4,11 +4,10 @@ import android.app.Application
 import com.architectcoders.grupo2verano2020.App
 import com.architectcoders.grupo2verano2020.model.server.TheQuestionDb
 
-import com.architectcoders.grupo2verano2020.model.database.Answers as DbAnswers
-import com.architectcoders.grupo2verano2020.model.server.Answers as ServerAnswers
 
-import com.architectcoders.grupo2verano2020.model.database.QuestionsAnswers as DbQuestionsAnswers
-import com.architectcoders.grupo2verano2020.model.server.QuestionsAnswers as ServerQuestionsAnswers
+
+import com.architectcoders.grupo2verano2020.model.database.Questions as DbQuestions
+import com.architectcoders.grupo2verano2020.model.server.Questions as ServerQuestions
 
 class DataRepository(application: App) {
 
@@ -20,13 +19,9 @@ class DataRepository(application: App) {
 
 }
 
-//private fun ServerAnswers.convertToDbQuestion() = DbAnswers(
-//    answer,
-//    isCorrect
-//)
-//
-//private fun ServerQuestionsAnswers.convertToDbQuestionAnswer()=DbQuestionsAnswers(
-//    id,
-//    question,
-//   answer
-//)
+private fun ServerQuestions.convertToDbQuestion() = DbQuestions(
+    id,
+    questions,
+    questionCount,
+    quiz
+)

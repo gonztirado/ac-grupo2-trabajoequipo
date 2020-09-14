@@ -1,9 +1,9 @@
 package com.architectcoders.grupo2verano2020.model.database
 
 
-import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.architectcoders.grupo2verano2020.model.server.Questions
 
 //todo: Uid = Jwf0Y4VAFsXOm8hBRP6f
 
