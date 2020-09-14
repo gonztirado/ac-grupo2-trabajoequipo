@@ -5,16 +5,16 @@ import androidx.room.*
 
 @Dao
 interface QuestionDao {
-    @Query("SELECT * FROM Uid")
-    fun getAll(): List<Uid>
+    @Query("SELECT * FROM Questions")
+    fun getAll(): List<Questions>
 
-    @Query("SELECT *FROM uid WHERE id= :id")
-    fun findById(id: String): Uid
+    @Query("SELECT *FROM Questions WHERE id= :id")
+    fun findById(id: String): Questions
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertUid(uid: List<Uid>)
+    fun insertUid(uid: List<Questions>)
 
     @Update
-    fun updateUid(uid: Uid)
+    fun updateUid(uid: Questions)
 
 }
