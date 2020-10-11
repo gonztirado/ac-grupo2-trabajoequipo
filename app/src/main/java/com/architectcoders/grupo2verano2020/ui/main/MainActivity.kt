@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         when(model){
             is MainViewModel.UiModel.Content -> {
-                Log.d(TAG, "getQuestionRemote: thomy  "+model.question.size)
+                Log.d(TAG, "updateUi: thomy:: "+model.question[0].answers[0].answer)
             }
         }
 

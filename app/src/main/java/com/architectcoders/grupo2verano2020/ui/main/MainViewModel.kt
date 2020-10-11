@@ -2,7 +2,7 @@ package com.architectcoders.grupo2verano2020.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.architectcoders.domain.QuestionsAnswers
+import com.architectcoders.domain.Question
 import com.architectcoders.grupo2verano2020.ui.common.ScopedViewModel
 import kotlinx.coroutines.launch
 
@@ -19,7 +19,7 @@ class MainViewModel(private val getQuestions: GetQuestions) : ScopedViewModel() 
 
 
     sealed class UiModel {
-        class Content(val question: List<QuestionsAnswers>) : UiModel()
+        class Content(val question: List<Question>) : UiModel()
 
 
     }

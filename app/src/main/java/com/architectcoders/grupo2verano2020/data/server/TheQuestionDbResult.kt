@@ -1,29 +1,24 @@
 package com.architectcoders.grupo2verano2020.data.server
 
+import android.os.Parcelable
+import androidx.room.Relation
+import kotlinx.android.parcel.Parcelize
 
 
-
-/*
+@Parcelize
 data class Questions(
     val id: String,
-    val questions: ArrayList<QuestionsAnswers>,
-    val questionCount: Int,
-    val quiz: String
-)
+    val question: String,
+    val answers: List<Answer>
+): Parcelable
 
-data class QuestionsAnswers(
-    val id: String,
-    val question: String?,
-    val answer: ArrayList<Answers>
-)
-
-
-data class Answers(
-    val answer: String?,
+@Parcelize
+data class Answer(
+    val answer: String,
     val isCorrect: Boolean
-)
+) : Parcelable
 
-*/
+
 
 
 

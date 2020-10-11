@@ -1,8 +1,8 @@
 package com.architectcoders.data.source
 
-import com.architectcoders.domain.QuestionsAnswers
+import com.architectcoders.domain.Question
 
 
 interface RemoteDataSource {
-    suspend fun getAllQuestions():List<QuestionsAnswers>
+    suspend fun getAllQuestions():List<Question>
 }

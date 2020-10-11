@@ -1,16 +1,22 @@
 package com.architectcoders.grupo2verano2020.data.server
 
+import android.util.Log
 import com.architectcoders.data.source.RemoteDataSource
-import com.architectcoders.domain.QuestionsAnswers
-import com.architectcoders.grupo2verano2020.data.toDomainQuestion
+import com.architectcoders.domain.Question
+
 
 class QuestionDbDataSource:RemoteDataSource {
-    override suspend fun getAllQuestions(): List<QuestionsAnswers> =
 
-        TheQuestionDb.retrofit
+    override suspend fun getAllQuestions(): List<Question> {
+
+
+        return TheQuestionDb.retrofit
             .listQuestionAsync()
-            .questions
-            .map{it.toDomainQuestion()}
+            .map { it.toDomainQuestionAnswer() }
+
+    }
+
+
 
 
 

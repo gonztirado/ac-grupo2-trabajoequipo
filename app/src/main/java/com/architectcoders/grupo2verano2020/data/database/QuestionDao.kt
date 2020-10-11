@@ -17,7 +17,7 @@ interface QuestionDao {
 
 
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertUid(uid: List<QuestionsAnswers>)
 
     @Update
